@@ -7,6 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    Test
+    <div id="intro">
+        <h1>Title of the story</h1>
+        
+        <p>story intro or beginning paragraph</p>
+
+    </div>
+
+    <div id="buttons">
+
+    </div>
+    <script>
+
+    let buttonContainer = document.getElementById("buttons");
+
+    const story = {
+        into : {
+            text: "Story",
+            choices : ["one", "two", "three"]
+        }
+    }
+
+    choices = ["one", "two", "three"];
+
+    for(let choice in choices){
+        makeButton(choice)
+    }
+
+    function makeButton(btnText){
+        let button = document.createElement("button");
+
+        button.innerHTML = btnText;
+
+        buttonContainer.appendChild(button);
+
+        button.addEventListener("click", function() {
+
+         alert("chose" + choice);
+        
+        });
+    }
+    </script>
 </body>
 </html>
