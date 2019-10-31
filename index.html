@@ -31,14 +31,15 @@
             choices : [
                 ["Bad Intentions"],
                 ["Leave To Die"],
-                ["Raise Baby As Own"],
+                ["Raise Baby As Own"]
                     ]
-        }
+        },
+        
     }
 
-    choices = ["two", "three", "four"];
+    choices = ["Bad Intentions", "Leave To Die", "Raise Baby As Own"];
 
-    for(let choice in choices){
+    for(let choice of choices){
         makeButton(choice)
     }
 
