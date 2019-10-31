@@ -33,8 +33,8 @@
                 ["Leave To Die", "choice2"],
                 ["Raise Baby As Own", "choice3"]
                     ]
-        },
-        choice1 :{
+        }, 
+        choice1 :{ 
             text : "Donabe takes Yashiro and raises him as a slave not his own son. Donabe and the samurai do not treat him with respect. Then Yashiro grows old enough to rebell against the samurai. He can either go against donabe and the samurai or give in and become a slave for the rest of his life.",
             choices : [
                 ["Give in and become a slave for the rest of his life","choicegivein"]
@@ -65,14 +65,19 @@
         });
     }
 
-        function showStory(text) {
+        function storyBuild(text) {
             let storyItem = document.createElement
             ("p");
 
             storyItem.innerText = text;
 
+
             storyContainer.appendChild(storyItem);
         }
+
+    function showStory(){
+        
+    }
     </script>
 </body>
 </html>
