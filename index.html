@@ -10,7 +10,7 @@
     <div id="intro">
         <h1>The Abandonded Warrior</h1>
         
-        <p>Starts off with Yashiro's family being chased by samurai. Family gets away and stay in an abandoned house. The samurai eventually regroup and burn down the house. His family escapes except Yahsiro does not. Then the head leader of the samurai named Donabe finds Yashiro. Then once the house is burned down to ash Donabe has three choices. To use his band Intentions, Leave him to die, Or Raise him as his own</p>
+        <p>Starts off with Yashiro's family being chased by samurai. Family gets away and stay in an abandoned house. The samurai eventually regroup and burn down the house. His family escapes except Yahsiro does not. Then the head leader of the samurai named Donabe finds Yashiro. Then once the house is burned down to ash Donabe has three choices. To use his bad Intentions, Leave him to die, Or Raise him as his own</p>
 
     </div>
 
@@ -19,16 +19,18 @@
     </div>
     <script>
 
+    let storyContainer = document.getElementById("story");
+
     let buttonContainer = document.getElementById("buttons");
 
     const story = {
         into : {
             text: "Story",
-            choices : ["Bad Intentions", "Leave To Die", "Raise Baby As Own"]
+            choices : ["two", "three", "four"]
         }
     }
 
-    choices = ["Bad Intentions", "Leave To Die", "Raise Baby As Own"];
+    choices = ["two", "three", "four"];
 
     for(let choice in choices){
         makeButton(choice)
@@ -47,6 +49,15 @@
         
         });
     }
+
+        function showStory(text) {
+            let storyItem = document.createElement
+            ("p");
+
+            storyItem.innerText = text;
+
+            storyContainer.appendChild(storyItem);
+        }
     </script>
 </body>
 </html>
