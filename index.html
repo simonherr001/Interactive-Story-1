@@ -81,12 +81,14 @@
         storyContainer.innerHTML = "";
         buttonContainer.innerHTML = "";
 
-        for (let page of literature)
+        for (let page of literature){
         storyBuild(story[page].text);
-        
-        for(let choice of story[currentPage].choices)
-        makeButton(choices[0], choice[1])
     }
+        for(let choice of story[currentPage].choices){
+        makeButton(choices[0], choice[1])
+        } 
+    }
+
     </script>
 </body>
 </html>
