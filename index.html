@@ -29,12 +29,19 @@
         intro : {
             text: "Story",
             choices : [
-                ["Bad Intentions"],
-                ["Leave To Die"],
-                ["Raise Baby As Own"]
+                ["Bad Intentions", "choice1"],
+                ["Leave To Die", "choice2"],
+                ["Raise Baby As Own", "choice3"]
                     ]
         },
-        
+        choice1 :{
+            text : "Donabe takes Yashiro and raises him as a slave not his own son. Donabe and the samurai do not treat him with respect. Then Yashiro grows old enough to rebell against the samurai. He can either go against donabe and the samurai or give in and become a slave for the rest of his life.",
+            choices : [
+                ["Give in and become a slave for the rest of his life","choicegivein"]
+                ["Go against donabe and his gang","rebell"]
+            ]
+        }
+
     }
 
     choices = ["Bad Intentions", "Leave To Die", "Raise Baby As Own"];
@@ -52,7 +59,8 @@
 
         button.addEventListener("click", function() {
 
-         alert("chose" + choice);
+        history.push(choice);
+        showStory();
         
         });
     }
