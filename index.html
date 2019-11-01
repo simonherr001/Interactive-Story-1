@@ -50,7 +50,7 @@
         makeButton(choice)
     }
 
-    function makeButton(btnText){
+    function makeButton(btnText, choice){
         let button = document.createElement("button");
 
         button.innerHTML = btnText;
@@ -88,6 +88,8 @@
         makeButton(choices[0], choice[1])
         } 
     }
+
+    storyShow();
 
     </script>
 </body>
