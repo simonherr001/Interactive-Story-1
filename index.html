@@ -36,7 +36,7 @@
                 choices : [
                     ["Bad Intentions", "Evil"],
                     ["Leave To Die", "NoMercy"],
-                    ["Raise Him Like His Own Son", "Love"]
+                    ["Raise Him Like His Own Son", "Love"]          
                 ]
             },
             Evil : {
@@ -230,15 +230,15 @@
             storyContainer.appendChild(storyItem);
         }
         function storyShow(){
-            let currentPage = history[history.length - 1]; // set currentPage to last index of history array.
-            storyContainer.innerHTML = ""; // reset html
-            buttonContainer.innerHTML = ""; // reset buttons
+            let currentPage = history[history.length - 1]; // set currentPage of the array history to last index
+            storyContainer.innerHTML = ""; // resets HTML  // basically these two reset them. 
+            buttonContainer.innerHTML = ""; // resets the buttons
             
-            for(let page of history){ // build story text from items in history array
+            for(let page of history){ // This build the story text from the items in the histry array
                 storyBuild(story[page].text);
             }
             
-            for(let choice of story[currentPage].choices){ // build buttons from choices property of most recent story choice
+            for(let choice of story[currentPage].choices){ //Builds buttons from the choices of the most recent story change
                 makeButton(choice[0], choice[1])
             }
         }
